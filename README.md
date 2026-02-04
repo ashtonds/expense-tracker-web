@@ -26,13 +26,25 @@ A full-stack expense tracker built for students to manage income and expenses wi
 ---
 
 ## 📊 Screenshots
-- Login Page  
-- Register Page  
-- Add Transaction Page  
-- Dashboard with Charts  
-- Edit Transaction Page  
 
+### 🔐 Login Page
+<img src="Screenshots/login.png" alt="Login Page" width="50%">
+
+### 📝 Register Page
+<img src="Screenshots/register.png" alt="Register Page" width="50%">
+
+### ➕ Add Transaction Page
+<img src="Screenshots/add-transaction.png" alt="Add Transaction Page" width="50%">
+
+### 📈 Dashboard with Charts
+<img src="Screenshots/dashboard.png" alt="Dashboard with Charts" width="50%">
+
+### ✏️ Edit Transaction Page
+<img src="Screenshots/dashboard-2.png" alt="Edit Transaction Page" width="50%">
+
+> 📁 Check `/Screenshots` for more images
 ---
+
 
 ## 📂 Project Structure
 
