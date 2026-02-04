@@ -35,20 +35,21 @@ A full-stack expense tracker built for students to manage income and expenses wi
 ---
 
 ## 📂 Project Structure
-ExpenseWebsite/
-│
-├── db.php
-├── login.php
-├── register.php
-├── forgot_password.php
-├── change_password.php
-├── logout.php
-├── index.php
-├── dashboard.php
-├── edit.php
-├── style.css
-├── login.css
-└── README.md
+
+ExpenseWebsite/<br>
+│<br>
+├── db.php<br>
+├── login.php<br>
+├── register.php<br>
+├── forgot_password.php<br>
+├── change_password.php<br>
+├── logout.php<br>
+├── index.php<br>
+├── dashboard.php<br>
+├── edit.php<br>
+├── style.css<br>
+├── login.css<br>
+└── README.md<br>
 
 
 ---
@@ -74,37 +75,36 @@ ExpenseWebsite/
 
 ## 📌 Interview Highlight
 > “I built a secure expense tracking web application with authentication, full CRUD operations, monthly analytics, and interactive data visualization.”
+
+---
+
 ### 🔐 PREPARED STATEMENTS (SECURITY UPGRADE)
 
+<br>
 ❌ Old (unsafe)
 
  $sql = "SELECT * FROM users WHERE username='$username'";
-
+ 
+<br>
 ✅ New (SAFE)
 
 $stmt = mysqli_prepare($conn,"SELECT * FROM users WHERE username=? LIMIT 1");
+
 mysqli_stmt_bind_param($stmt, "s", $username);
+
 mysqli_stmt_execute($stmt);
+
 $result = mysqli_stmt_get_result($stmt);
+
 $user = mysqli_fetch_assoc($result);
 
-
+<br>
 🔄 Example:
 
 Insert Transaction (Secure)
-$stmt = mysqli_prepare($conn,
-    "INSERT INTO transactions (type, category, amount, description, created_at)
-     VALUES (?, ?, ?, ?, ?)"
-);
 
-mysqli_stmt_bind_param(
-    $stmt,
-    "ssdss",
-    $type,
-    $category,
-    $amount,
-    $description,
-    $date
-);
+$stmt = mysqli_prepare($conn,"INSERT INTO transactions (type, category, amount, description, created_at) VALUES (?, ?, ?, ?, ?)");
+
+mysqli_stmt_bind_param($stmt,"ssdss",$type,$category,$amount,$description,$date);
 
 mysqli_stmt_execute($stmt);
